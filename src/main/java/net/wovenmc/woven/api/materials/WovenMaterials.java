@@ -14,12 +14,15 @@
  * limitations under the License.
  */
 
-package net.wovenmc.woven.api.template;
+package net.wovenmc.woven.api.materials;
 
-/**
- * Represents a dummy class as template for API.
- * <p>
- * This should not be present in any module.
- */
-public class TemplateAPI {
+import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.SimpleRegistry;
+import net.wovenmc.woven.impl.materials.WovenMaterialsImpl;
+import net.wovenmc.woven.impl.materials.material.SimpleWovenMaterial;
+
+public interface WovenMaterials {
+	WovenMaterials INSTANCE = WovenMaterialsImpl.INSTANCE;
+	SimpleRegistry MATERIALS = FabricRegistryBuilder.createSimple(SimpleWovenMaterial.class, new Identifier("woven_materials", "materials")).buildAndRegister();
 }

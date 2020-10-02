@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
-package net.wovenmc.woven.impl.template;
-
-import org.apache.logging.log4j.LogManager;
+package net.wovenmc.woven.impl.materials;
 
 import net.fabricmc.api.ModInitializer;
+import net.wovenmc.woven.api.materials.WovenMaterials;
 
-public class TemplateModInitializer implements ModInitializer {
+public class WovenMaterialsImpl implements WovenMaterials, ModInitializer {
+	public static WovenMaterialsImpl INSTANCE = new WovenMaterialsImpl();
+
 	@Override
 	public void onInitialize() {
-		LogManager.getLogger("woven_module_template").info("Woven Module Template initialized.");
+
 	}
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "id": "woven_materials",
-  "name": "Woven Materials",
+  "id": "woven_materials_test",
+  "name": "Woven Materials Test",
   "version": "${version}",
   "description": "${description}",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.wovenmc.woven.impl.materials.WovenMaterialsImpl"
+      "net.wovenmc.woven.test.materials.MaterialsTestMod"
     ]
   },
   "mixins": [],
